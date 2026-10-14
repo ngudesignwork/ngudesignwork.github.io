@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>[Your Name] — Senior Product Designer</title>
-  <meta name="description" content="[Your Name] is a senior product designer designing calm, considered products for complex problems.">
+  <title>Lisa Nguyen — Senior Product Designer</title>
+  <meta name="description" content="Lisa Nguyen is a senior product designer designing calm, considered products for complex problems.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,13 +16,11 @@
 
     <aside class="intro">
       <div class="intro-top">
-        <a class="brand" href="./"><span class="brand-dot"></span>[Your Name]</a>
-        <p class="eyebrow">Senior Product Designer — [City]</p>
+        <a class="brand" href="./">Lisa Nguyen</a>
         <h1 class="serif">Designing <em class="accent wiggle">calm,</em> considered products for complex problems.</h1>
         <p class="bio">I lead end-to-end product design — from fuzzy problem framing to polished, shipped systems. Currently [role] at [Company].</p>
         <nav aria-label="Main">
-          <a href="#" data-roll>About</a>
-          <a href="#" data-roll>Writing</a>
+          <a href="about.html" data-roll>About</a>
           <a href="#" data-roll>Résumé</a>
         </nav>
       </div>
@@ -32,23 +30,42 @@
         <div class="contact-meta">
           <div class="socials">
             <a href="#" data-roll>LinkedIn</a>
-            <a href="#" data-roll>Read.cv</a>
-            <a href="#" data-roll>Dribbble</a>
           </div>
-          <button class="dog-toggle" type="button" data-dog-toggle aria-pressed="true">Dog cursor: <span data-dog-state>on</span></button>
+          <button class="cursor-toggle" type="button" role="switch" aria-checked="true" data-cursor-toggle>
+            Butterfly cursor <span class="switch" aria-hidden="true"><span class="switch-thumb"></span></span>
+          </button>
         </div>
+        <p class="copyright">© 2026 Lisa Nguyen</p>
       </div>
     </aside>
 
     <main class="worklist" id="work">
       <div class="worklist-head">
         <h2 class="serif">Selected work</h2>
-        <span class="muted" style="font-size: 13px">06 projects · 2019 — Now</span>
       </div>
 
       <!-- To add a project: copy one <a class="project"> block.
            Replace the placeholder div with <img src="assets/your-cover.jpg" alt="…"> -->
 
+      <!-- Featured card · option A, slim (wide short cover, no button) -->
+      <a class="featured" href="work/project-01.html">
+        <div class="featured-cover">
+          <div class="placeholder">[Hero cover image]</div>
+          <span class="tag">Featured</span>
+        </div>
+        <div class="featured-text">
+          <span class="featured-meta">
+            <span>01 · [Company] · [Year]</span>
+            <span class="featured-read">Read <span class="featured-arrow" aria-hidden="true">→</span></span>
+          </span>
+          <span class="featured-title">[Case study title]</span>
+          <span class="featured-line">[One-line outcome or problem statement]</span>
+        </div>
+      </a>
+
+      <!-- [HIDDEN: featured-row] Original featured project as a regular row.
+           To bring it back, delete this comment's opening and closing lines
+           and remove the "Featured card · option A" block above.
       <a class="project" href="work/project-01.html">
         <div class="project-cover"><div class="placeholder">[Cover image]</div></div>
         <div class="project-text">
@@ -58,6 +75,7 @@
         </div>
         <span class="tag">Featured</span>
       </a>
+      [/HIDDEN: featured-row] -->
 
       <a class="project" href="#">
         <div class="project-cover"><div class="placeholder tone-2">[Cover image]</div></div>
@@ -109,12 +127,15 @@
         <span class="project-arrow" aria-hidden="true">↗</span>
       </a>
 
+      <!-- [HIDDEN: archive-link] "Archive & side projects" link, hidden for now.
+           To bring it back, delete this comment's opening and closing lines.
       <a class="archive-link" href="#">
         <span data-roll>Archive &amp; side projects</span>
         <span class="muted">→</span>
       </a>
+      [/HIDDEN: archive-link] -->
+      <div style="height: 24px"></div>
 
-      <p class="muted" style="font-size: 13px; padding: 8px 0 24px">© 2026 [Your Name]</p>
     </main>
 
   </div>

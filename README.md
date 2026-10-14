@@ -6,9 +6,10 @@ Personal portfolio site. Plain HTML, CSS and a little JavaScript: no build step,
 
 ```
 index.html            Home: intro on the left, scrolling project list on the right
+about.html            About page
 work/project-01.html  Case study template
 styles.css            Colors, type and layout (design tokens at the top)
-main.js               Mini interactions: rolling link text, dog cursor
+main.js               Mini interactions: rolling link text, butterfly cursor
 assets/               Images (cover images, case study screens)
 ```
 
@@ -47,8 +48,9 @@ Fonts: Instrument Serif (headings) and Instrument Sans (body), from Google Fonts
 - **Rolling text:** add `data-roll` to any link and its text rolls up on hover.
 - **Project rows:** title slides and turns italic, cover zooms, arrow lifts.
 - **Wiggle:** add `class="wiggle"` to any inline word.
-- **Dog cursor:** a dog trails the pointer and sticks its tongue out over links.
-  Visitors can turn it off with the "Dog cursor" button. The choice is remembered.
+- **Butterfly cursor:** a monarch butterfly trails the pointer and flaps its wings over
+  links. Visitors can turn it off with the "Butterfly cursor" toggle switch. The choice
+  is remembered.
 
 Hover effects only run on devices with a mouse or trackpad, and motion is reduced
 for visitors who turn on "Reduce motion" in their OS settings.

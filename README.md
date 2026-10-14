@@ -55,6 +55,6 @@ for visitors who turn on "Reduce motion" in their OS settings.
 
 ## Hosting (GitHub Pages)
 
-The repo is named `<username>.github.io`, so GitHub Pages serves it at
-`https://<username>.github.io`. In the repo, go to **Settings → Pages** and set the
+The repo is named `ngudesignwork.github.io`, so GitHub Pages serves it at
+`https://ngudesignwork.github.io`. In the repo, go to **Settings → Pages** and set the
 source to **Deploy from a branch → `main` / root**.

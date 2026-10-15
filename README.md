@@ -47,7 +47,7 @@ Fonts: Instrument Serif (headings) and Instrument Sans (body), from Google Fonts
 
 - **Rolling text:** add `data-roll` to any link and its text rolls up on hover.
 - **Project rows:** title slides and turns italic, cover zooms, arrow lifts.
-- **Wiggle:** add `class="wiggle"` to any inline word.
+- **Letter wave:** add `class="wave"` to any inline word and its letters hop in sequence on hover.
 - **Butterfly cursor:** a monarch butterfly trails the pointer and flaps its wings over
   links. Visitors can turn it off with the "Butterfly cursor" toggle switch. The choice
   is remembered.

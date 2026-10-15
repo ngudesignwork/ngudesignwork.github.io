@@ -260,8 +260,10 @@ h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
       arrow tilts toward the reader. */
 .project-title { display: inline-block; transition: transform .5s var(--ease), letter-spacing .5s var(--ease); }
 
-/* 3. Headline accent word wobbles once on hover. */
-.wiggle { display: inline-block; }
+/* 3. Letter wave — each letter of the headline accent word hops in sequence
+      on hover (main.js splits words marked .wave into letters). */
+.wave { display: inline-block; }
+.wave-letter { display: inline-block; }
 
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   a:hover .roll-inner, button:hover .roll-inner { transform: translateY(-1.2em); }
@@ -270,17 +272,18 @@ h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
   .project:hover .project-cover > * { transform: scale(1.06); }
   .project:hover .project-arrow { transform: translate(3px, -3px); color: var(--accent); }
 
-  .wiggle:hover { animation: wiggle .7s var(--ease); }
+  .wave:hover .wave-letter {
+    animation: wave .5s cubic-bezier(.2, .7, .2, 1) both;
+    animation-delay: calc(var(--i) * 60ms);
+  }
 
   .featured:hover .featured-cover > :first-child { transform: scale(1.04); }
   .featured:hover .featured-title { transform: translateX(8px); font-style: italic; }
   .featured:hover .project-arrow { transform: translate(3px, -3px); color: var(--accent); }
 }
-@keyframes wiggle {
-  0%, 100% { transform: rotate(0); }
-  20% { transform: rotate(-6deg) translateY(-2px); }
-  45% { transform: rotate(5deg); }
-  70% { transform: rotate(-2deg); }
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-0.12em); }
 }
 
 /* 4. Butterfly cursor — a monarch follows the pointer (main.js) and flaps its

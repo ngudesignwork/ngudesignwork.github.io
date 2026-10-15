@@ -24,6 +24,22 @@ document.querySelectorAll('[data-roll]').forEach((el) => {
 });
 
 /* ---------------------------------------------------------------------------
+   Letter wave — split any element with class "wave" into letters so CSS can
+   hop them one after another on hover. The letters stay plain inline text, so
+   the word still reads, copies and is announced as one word.
+   ------------------------------------------------------------------------ */
+document.querySelectorAll('.wave').forEach((el) => {
+  const letters = [...el.textContent].map((ch, i) => {
+    const s = document.createElement('span');
+    s.className = 'wave-letter';
+    s.textContent = ch;
+    s.style.setProperty('--i', i);
+    return s;
+  });
+  el.replaceChildren(...letters);
+});
+
+/* ---------------------------------------------------------------------------
    2. Butterfly cursor — a monarch butterfly trails the pointer and flaps its
       wings over links and buttons.
    ------------------------------------------------------------------------ */

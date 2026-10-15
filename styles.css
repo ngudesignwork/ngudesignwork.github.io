@@ -53,7 +53,7 @@ h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
   clip: rect(0 0 0 0); white-space: nowrap;
 }
 
-.brand { display: inline-flex; align-items: center; text-decoration: none; font-family: var(--sans); font-weight: 500; font-size: 24px; line-height: 1; letter-spacing: -0.02em; color: var(--name-color); transition: color .3s var(--ease); }
+.brand { display: inline-flex; align-items: center; text-decoration: none; font-family: var(--sans); font-weight: 550; font-size: 20px; line-height: 1; letter-spacing: -0.02em; color: var(--name-color); transition: color .3s var(--ease); }
 .brand:hover { color: var(--muted); }
 .copyright { font-size: 13px; color: var(--muted); }
 .site-footer .copyright { flex-basis: 100%; }
@@ -135,7 +135,7 @@ h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
      scroll on its own instead of clipping the email and copyright. */
   .intro { flex: 0 0 clamp(280px, 32vw, 440px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: #CFC3E3 transparent; }
   /* Sit the name on the same baseline as the "Selected work" heading. */
-  .intro .brand { margin-top: 9px; }
+  .intro .brand { margin-top: 12.5px; }
   .worklist { flex: 1 1 0; height: 100%; overflow-y: auto; padding-right: 12px; scrollbar-width: thin; scrollbar-color: #CFC3E3 transparent; }
 }
 

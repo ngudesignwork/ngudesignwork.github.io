@@ -9,6 +9,7 @@
   --muted: #5E5869;       /* secondary text */
   --line: #D6CCE6;        /* dividers */
   --accent: #FF7C04;      /* the pop of color */
+  --name-color: var(--ink);  /* your name in the header */
   --band: #6E597A;        /* "next case study" band */
   --band-text: #F5F1FB;
   --band-muted: #E6DEF2;
@@ -52,7 +53,8 @@ h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
   clip: rect(0 0 0 0); white-space: nowrap;
 }
 
-.brand { display: inline-flex; align-items: center; text-decoration: none; font-weight: 600; font-size: 16px; }
+.brand { display: inline-flex; align-items: center; text-decoration: none; font-family: var(--sans); font-weight: 550; font-size: 20px; line-height: 1; letter-spacing: -0.02em; color: var(--name-color); transition: color .3s var(--ease); }
+.brand:hover { color: var(--muted); }
 .copyright { font-size: 13px; color: var(--muted); }
 .site-footer .copyright { flex-basis: 100%; }
 
@@ -129,7 +131,11 @@ h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
 
 @media (min-width: 768px) {
   .shell { height: 100vh; overflow: hidden; flex-wrap: nowrap; column-gap: clamp(32px, 5vw, 72px); }
-  .intro { flex: 0 0 clamp(280px, 32vw, 440px); }
+  /* In very short windows the intro can be taller than the screen; let it
+     scroll on its own instead of clipping the email and copyright. */
+  .intro { flex: 0 0 clamp(280px, 32vw, 440px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: #CFC3E3 transparent; }
+  /* Sit the name on the same baseline as the "Selected work" heading. */
+  .intro .brand { margin-top: 12.5px; }
   .worklist { flex: 1 1 0; height: 100%; overflow-y: auto; padding-right: 12px; scrollbar-width: thin; scrollbar-color: #CFC3E3 transparent; }
 }
 
